@@ -4,8 +4,7 @@
   "description": "给一些网站进行自动签到",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "test":"set email_pass=ompthvpmzhekdhjc&&set email_account=2423674938@qq.com&&set email_address=1125089452@qq.com&&npm start"
+    "start": "node index"
   },
   "repository": {
     "type": "git",

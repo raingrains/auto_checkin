@@ -16,5 +16,12 @@ module.exports = {
         cookie
       }
     }).then(res=>res.data)
+  },
+  account:(cookie)=>{
+    return axios.post('https://api.juejin.cn/growth_api/v1/get_cur_point','', {
+      headers: {
+        cookie
+      }
+    }).then(res=>res.data)
   }
 }
