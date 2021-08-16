@@ -14,11 +14,11 @@ async function index(){
   }
   if(config.jueJin_cookie.length>0){
     data.jueJin.checkIn = await task.jueJin.check_in(config.jueJin_cookie)
-    // data.jueJin.draw = await task.jueJin.draw(config.jueJin_cookie)
+    data.jueJin.draw = await task.jueJin.draw(config.jueJin_cookie)
   }
 
   if(config.freeV2ray_cookie.length>0){
-    // data.freeV2ray.checkIn = await task.freeV2ray.check_in(config.freeV2ray_cookie)
+    data.freeV2ray.checkIn = await task.freeV2ray.check_in(config.freeV2ray_cookie)
   }
   message.sendMail(`
     自动签到:
