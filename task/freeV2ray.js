@@ -1,7 +1,5 @@
 const axios = require('axios')
 
-
-
 module.exports = {
   // freeV2ray的自动签到
   check_in: (cookie) => {
@@ -9,6 +7,6 @@ module.exports = {
       headers: {
         cookie
       }
-    }).then(res=res.data)
+    }).then(res=>res.data)
   }
 }

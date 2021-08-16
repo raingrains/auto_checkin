@@ -7,7 +7,7 @@ module.exports = {
       headers: {
         cookie
       }
-    }).then(res=res.data)
+    }).then(res=>res.data)
   },
   // 掘金的自动抽奖
   draw: (cookie) => {
@@ -15,6 +15,6 @@ module.exports = {
       headers: {
         cookie
       }
-    }).then(res=res.data)
+    }).then(res=>res.data)
   }
 }

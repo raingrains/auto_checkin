@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "test":"set jueJin_cookie=_ga=GA1.2.1583941309.1612399327; n_mh=CH2VixJws3sltCluEr0ZX4DxLoiqjyxOVSWFhqhtmd4; passport_csrf_token_default=cfb10a8dd38aa65ba6079862040a29bb; passport_csrf_token=cfb10a8dd38aa65ba6079862040a29bb; sid_guard=45ecf2633ed03a1065719da23e32abab%7C1627869622%7C5184000%7CFri%2C+01-Oct-2021+02%3A00%3A22+GMT; uid_tt=838eb90ed0f018c35488d9ff4d7f2aef; uid_tt_ss=838eb90ed0f018c35488d9ff4d7f2aef; sid_tt=45ecf2633ed03a1065719da23e32abab; sessionid=45ecf2633ed03a1065719da23e32abab; sessionid_ss=45ecf2633ed03a1065719da23e32abab; SID_UCP=45ecf2633ed03a1065719da23e32abab; SSID_UCP=45ecf2633ed03a1065719da23e32abab; MONITOR_WEB_ID=11f3108d-ed44-4c41-b14d-c3b6b7941a91&&npm start"
+    "test":"set email_pass=ompthvpmzhekdhjc&&set email_account=2423674938@qq.com&&set email_address=1125089452@qq.com&&npm start"
   },
   "repository": {
     "type": "git",
