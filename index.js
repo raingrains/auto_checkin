@@ -21,7 +21,7 @@ async function index(){
     data.freeV2ray.checkIn = await task.freeV2ray.check_in(config.freeV2ray_cookie)
   }
   message.sendMail(`
-    自动签到:
+  ####自动签到:
   1.掘金签到：${JSON.stringify(data.jueJin.checkIn)},
   2.掘金抽奖：${JSON.stringify(data.jueJin.draw)},
   3.freeV2ray签到：${JSON.stringify(data.freeV2ray.checkIn)}
