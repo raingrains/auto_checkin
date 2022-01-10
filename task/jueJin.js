@@ -1,26 +1,36 @@
 const axios = require('axios')
 
+const aid = '2608'
+const uuid = '6953843768190289439'
+const luckUrl = `https://api.juejin.cn/growth_api/v1/lottery_lucky/dip_lucky?aid=${aid}&uuid=${uuid}`
+const checkInUrl = `https://api.juejin.cn/growth_api/v1/check_in?aid=${aid}&uuid=${uuid}`
+const drawUrl = `https://api.juejin.cn/growth_api/v1/lottery/draw?aid=${aid}&uuid=${uuid}`
+
 module.exports = {
   // 掘金的自动签到
   check_in: (cookie) => {
-    return axios.post('https://api.juejin.cn/growth_api/v1/check_in','',{
+    return axios.post(checkInUrl,'',{
       headers: {
-        cookie
+        cookie,
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
     }).then(res=>res.data)
   },
   // 掘金的自动抽奖
   draw: (cookie) => {
-    return axios.post('https://api.juejin.cn/growth_api/v1/lottery/draw','', {
+    return axios.post(drawUrl,'', {
       headers: {
-        cookie
+        cookie,
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
     }).then(res=>res.data)
   },
-  account:(cookie)=>{
-    return axios.post('https://api.juejin.cn/growth_api/v1/get_cur_point','', {
+  // 沾喜气
+  lucky:(cookie)=>{
+    return axios.post(luckUrl,'',{
       headers: {
-        cookie
+        cookie,
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
     }).then(res=>res.data)
   }

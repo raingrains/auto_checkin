@@ -1,7 +1,7 @@
 module.exports = {
-  jueJin_cookie: process.env.juejin_cookie || '', // 掘金的cookie
+  jueJin_cookie: process.env.juejin_cookie || '_ga=GA1.2.1583941309.1612399327; n_mh=CH2VixJws3sltCluEr0ZX4DxLoiqjyxOVSWFhqhtmd4; MONITOR_WEB_ID=11f3108d-ed44-4c41-b14d-c3b6b7941a91; odin_tt=de3160cc52e9102a03fc66402d69e44de2cf84a099a9419f83df1d5944128589f177380fef1d2d9eb3057a7733a4bb2c5ee0465adff926ea6c2893542a44a64d; passport_csrf_token_default=531258793f97d5cd30f93b66a2c00b45; passport_csrf_token=531258793f97d5cd30f93b66a2c00b45; sid_guard=466956bb468a65b8ac219ea904d5bed6%7C1638433673%7C5184000%7CMon%2C+31-Jan-2022+08%3A27%3A53+GMT; uid_tt=e4f19efeb5c96d44add9a9e48e59d48d; uid_tt_ss=e4f19efeb5c96d44add9a9e48e59d48d; sid_tt=466956bb468a65b8ac219ea904d5bed6; sessionid=466956bb468a65b8ac219ea904d5bed6; sessionid_ss=466956bb468a65b8ac219ea904d5bed6; sid_ucp_v1=1.0.0-KDE5NjU5MDljMzBiNDRhYjI4OTRiZmQzZDlmMTAwOGZjZjBhN2NjZGMKFgj9-NCN4fXjAxCJh6KNBhiwFDgIQDgaAmxmIiA0NjY5NTZiYjQ2OGE2NWI4YWMyMTllYTkwNGQ1YmVkNg; ssid_ucp_v1=1.0.0-KDE5NjU5MDljMzBiNDRhYjI4OTRiZmQzZDlmMTAwOGZjZjBhN2NjZGMKFgj9-NCN4fXjAxCJh6KNBhiwFDgIQDgaAmxmIiA0NjY5NTZiYjQ2OGE2NWI4YWMyMTllYTkwNGQ1YmVkNg', // 掘金的cookie
   freeV2ray_cookie: process.env.freeV2ray_cookie || '', // freeV2ray的cookie
-  email_pass: process.env.email_pass || '', // email密钥
-  email_account: process.env.email_account || '', // email账户
-  email_address: process.env.email_address || '' // email收件人
+  email_pass: process.env.email_pass || 'ngnwszcezyiaibcd', // email密钥
+  email_account: process.env.email_account || '1125089452@qq.com', // email账户
+  email_address: process.env.email_address || '2423674938@qq.com' // email收件人
 }
