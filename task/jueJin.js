@@ -33,7 +33,7 @@ module.exports = {
           }
         }).then(res=>res.data) 
       }else{
-        return '今天已经免费抽奖过了'
+        return new Promise((resolve)=>{resolve('今天已经免费抽奖过了')})
       }
     })
     
