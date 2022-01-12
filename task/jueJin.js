@@ -19,7 +19,7 @@ module.exports = {
   },
   // 掘金的自动抽奖
   draw: (cookie) => {
-    axios.get(isFreeUrl,'',{
+    return axios.get(isFreeUrl,'',{
       headers: {
         cookie,
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
