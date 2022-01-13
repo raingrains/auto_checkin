@@ -4,8 +4,6 @@ const message = require('./message')
 const { autoGame } =require('./task/autoGame')
 
 async function index(){
-  autoGame()
-
   const data = {
     jueJin:{
       checkIn:null,
@@ -21,10 +19,11 @@ async function index(){
     data.jueJin.draw = await task.jueJin.draw(config.jueJin_cookie)
     data.jueJin.lucky = await task.jueJin.lucky(config.jueJin_cookie)
   }
-
   if(config.freeV2ray_cookie.length>0){
     data.freeV2ray.checkIn = await task.freeV2ray.check_in(config.freeV2ray_cookie)
   }
+  autoGame()
+  
   message.sendMail(`
   ####自动签到:
   1.freeV2ray签到：${JSON.stringify(data.freeV2ray.checkIn)}

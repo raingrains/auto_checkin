@@ -19,23 +19,25 @@ module.exports = {
   },
   // 掘金的自动抽奖
   draw: (cookie) => {
-    return axios.get(isFreeUrl,'',{
+    return axios.post(drawUrl,'', {
       headers: {
         cookie,
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
-    }).then(res=>{
-      if(res.data.data.free_count>0){
-        return axios.post(drawUrl,'', {
-          headers: {
-            cookie,
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
-          }
-        }).then(res=>res.data) 
-      }else{
-        return new Promise((resolve)=>{resolve('今天已经免费抽奖过了')})
-      }
-    })
+    }).then(res=>res.data) 
+    // return axios.get(isFreeUrl,'',{
+    //   headers: {
+    //     cookie,
+    //     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
+    //   }
+    // }).then(res=>{
+    //   console.log(res.data.data.free_count);
+    //   if(res.data.data.free_count>0){
+        
+    //   }else{
+    //     return new Promise((resolve)=>{resolve('今天已经免费抽奖过了')})
+    //   }
+    // })
     
   },
   // 沾喜气
