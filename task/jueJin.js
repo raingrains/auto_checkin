@@ -10,45 +10,49 @@ const isFreeUrl = `https://api.juejin.cn/growth_api/v1/lottery_config/get?aid=${
 module.exports = {
   // 掘金的自动签到
   check_in: (cookie) => {
-    return axios.post(checkInUrl,'',{
+    return axios.post(checkInUrl, '', {
       headers: {
         cookie,
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
-    }).then(res=>res.data)
+    }).then(res => ({
+      successful: true,
+      message: res.data
+    })).catch(err => ({
+      successful: false,
+      message: err
+    }))
   },
   // 掘金的自动抽奖
   draw: (cookie) => {
-    return axios.post(drawUrl,'', {
+    return axios.post(drawUrl, '', {
       headers: {
         cookie,
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
-    }).then(res=>res.data) 
-    // return axios.get(isFreeUrl,'',{
-    //   headers: {
-    //     cookie,
-    //     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
-    //   }
-    // }).then(res=>{
-    //   console.log(res.data.data.free_count);
-    //   if(res.data.data.free_count>0){
-        
-    //   }else{
-    //     return new Promise((resolve)=>{resolve('今天已经免费抽奖过了')})
-    //   }
-    // })
-    
+    }).then(res => ({
+      successful: true,
+      message: res.data
+    })).catch(err => ({
+      successful: false,
+      message: err
+    }))
   },
   // 沾喜气
-  lucky:(cookie)=>{
-    return axios.post(luckUrl,{
+  lucky: (cookie) => {
+    return axios.post(luckUrl, {
       lottery_history_id: "7020267603864059917",
-    },{
+    }, {
       headers: {
         cookie,
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67'
       }
-    }).then(res=>res.data)
+    }).then(res => ({
+      successful: true,
+      message: res.data
+    })).catch(err => ({
+      successful: false,
+      message: err
+    }))
   }
 }
