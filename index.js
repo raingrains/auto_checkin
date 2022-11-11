@@ -27,7 +27,7 @@ async function index() {
   // 4.掘金沾喜气：${JSON.stringify(data.jueJin.lucky)}
   // `)
 
-  if (Object.keys(data.juejin).map(item => data.jueJin[item].successful).includes(false)) {
+  if (Object.keys(data.jueJin).map(item => data.jueJin[item].successful).includes(false)) {
     message.sendMail(` ####自动签到:
   
     2.掘金签到：${JSON.stringify(data.jueJin.checkIn)},
