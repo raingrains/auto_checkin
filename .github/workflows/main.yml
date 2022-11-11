@@ -21,7 +21,7 @@ jobs:
       - name: 使用 Node.js 14
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
 
       # npm install
       - name: npm install
