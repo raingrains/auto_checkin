@@ -16,10 +16,10 @@ jobs:
       #    args: git submodule update --init --recursive
 
       # 使用 node:14
-      - name: 使用 Node.js 14
-        uses: actions/setup-node@v1
+      - name: 使用 Node.js 16
+        uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       # npm install
       - name: npm install
