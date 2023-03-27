@@ -1,7 +1,6 @@
 const config = require('./config')
 const task = require('./task')
 const message = require('./message')
-const { autoGame } = require('./task/autoGame')
 
 async function index() {
   const data = {
@@ -17,7 +16,6 @@ async function index() {
     data.jueJin.lucky = await task.jueJin.lucky(config.jueJin_cookie)
   }
 
-  autoGame()
 
   // message.sendMail(`
   // ####自动签到:
