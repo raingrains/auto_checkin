@@ -34,4 +34,5 @@ async function index() {
   }
 }
 
+console.log('test');
 index()
